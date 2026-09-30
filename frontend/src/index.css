@@ -1,0 +1,687 @@
+/* ==========================================================================
+   KEYDASH DESIGN SYSTEM & TOKENS
+   Theme: Playful, warm, stationery + mechanical keyboard aesthetics
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Warm Stationery Light (Default) */
+  --bg-primary: #FFF8F0;
+  --bg-secondary: #F7EFE5;
+  --bg-surface: #FFFFFF;
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --bg-subtle: #F3EBDD;
+  --bg-code: #F5EFEB;
+
+  --text-primary: #1F1B2E;
+  --text-secondary: #605A75;
+  --text-muted: #9E96B0;
+  --text-ghost: #B7AFC9;
+
+  --border-color: #E6DCD0;
+  --border-subtle: #F0E7DB;
+  --border-keycap: #D1C5B6;
+
+  --accent-coral: #FF6B5E;
+  --accent-coral-hover: #FF5241;
+  --accent-coral-subtle: #FFF0EE;
+  --accent-coral-border: #FFB3AC;
+
+  --accent-lavender: #C9A7F5;
+  --accent-lavender-hover: #B791EE;
+  --accent-lavender-subtle: #F4EEFD;
+
+  --accent-yellow: #FFE27A;
+  --accent-yellow-dark: #F59E0B;
+  --accent-yellow-subtle: #FFF9E6;
+
+  --accent-mint: #2EC4B6;
+  --accent-mint-subtle: #E8F9F7;
+  --accent-mint-hover: #22A69A;
+
+  --color-correct: #10B981;
+  --color-correct-bg: rgba(16, 185, 129, 0.12);
+  --color-wrong: #EF476F;
+  --color-wrong-bg: rgba(239, 71, 111, 0.14);
+  --color-untyped: #9E96B0;
+
+  /* Typography Tokens */
+  --font-display: 'Fredoka', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* 3D Shadows & Layering */
+  --shadow-sm: 0 2px 4px rgba(31, 27, 46, 0.04);
+  --shadow-md: 0 6px 16px rgba(31, 27, 46, 0.08);
+  --shadow-lg: 0 14px 32px rgba(31, 27, 46, 0.12);
+  --shadow-keycap: 0 4px 0 var(--border-keycap);
+  --shadow-keycap-pressed: 0 1px 0 var(--border-keycap);
+  --shadow-coral-keycap: 0 4px 0 #D9483B;
+  --shadow-lavender-keycap: 0 4px 0 #9E74D4;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transition Speeds */
+  --trans-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-smooth: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ==========================================================================
+   DARK THEME TOKENS
+   ========================================================================== */
+[data-theme="dark"] {
+  --bg-primary: #121019;
+  --bg-secondary: #191624;
+  --bg-surface: #1E1B2C;
+  --bg-surface-glass: rgba(30, 27, 44, 0.88);
+  --bg-subtle: #272238;
+  --bg-code: #161320;
+
+  --text-primary: #F5F2FC;
+  --text-secondary: #ADA6C2;
+  --text-muted: #726A87;
+  --text-ghost: #4A4460;
+
+  --border-color: #312B47;
+  --border-subtle: #252037;
+  --border-keycap: #3D3558;
+
+  --accent-coral: #FF786B;
+  --accent-coral-hover: #FF8F84;
+  --accent-coral-subtle: rgba(255, 120, 107, 0.15);
+  --accent-coral-border: #6B2E28;
+
+  --accent-lavender: #BFA0F2;
+  --accent-lavender-hover: #CFB5F7;
+  --accent-lavender-subtle: rgba(191, 160, 242, 0.15);
+
+  --accent-yellow: #FCD34D;
+  --accent-yellow-dark: #F59E0B;
+  --accent-yellow-subtle: rgba(252, 211, 77, 0.15);
+
+  --accent-mint: #34D399;
+  --accent-mint-subtle: rgba(52, 211, 153, 0.15);
+  --accent-mint-hover: #4ADE80;
+
+  --color-correct: #34D399;
+  --color-correct-bg: rgba(52, 211, 153, 0.18);
+  --color-wrong: #FF5E7E;
+  --color-wrong-bg: rgba(255, 94, 126, 0.22);
+  --color-untyped: #605878;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.5);
+  --shadow-keycap: 0 4px 0 #110E1C;
+  --shadow-keycap-pressed: 0 1px 0 #110E1C;
+  --shadow-coral-keycap: 0 4px 0 #9E2E24;
+  --shadow-lavender-keycap: 0 4px 0 #6C449C;
+}
+
+/* ==========================================================================
+   BASE & RESET
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  outline: none;
+  border: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-keycap);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* ==========================================================================
+   3D KEYCAP BUTTONS & INTERACTIVE COMPONENTS
+   ========================================================================== */
+.keycap-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-keycap);
+  transform: translateY(0);
+  transition: all var(--trans-fast);
+  user-select: none;
+}
+
+.keycap-btn:hover {
+  background-color: var(--bg-subtle);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 var(--border-keycap);
+}
+
+.keycap-btn:active, .keycap-btn.is-active {
+  transform: translateY(3px);
+  box-shadow: var(--shadow-keycap-pressed);
+}
+
+.keycap-btn-primary {
+  background-color: var(--accent-coral);
+  color: #FFFFFF;
+  border-color: #E24C3E;
+  box-shadow: var(--shadow-coral-keycap);
+}
+
+.keycap-btn-primary:hover {
+  background-color: var(--accent-coral-hover);
+  box-shadow: 0 5px 0 #BD3427;
+}
+
+.keycap-btn-primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #BD3427;
+}
+
+.keycap-btn-secondary {
+  background-color: var(--accent-lavender);
+  color: #1F1B2E;
+  border-color: #A77FE0;
+  box-shadow: var(--shadow-lavender-keycap);
+}
+
+.keycap-btn-secondary:hover {
+  background-color: var(--accent-lavender-hover);
+  box-shadow: 0 5px 0 #8E60D0;
+}
+
+.keycap-btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #8E60D0;
+}
+
+.keycap-btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 3px 0 var(--border-keycap);
+}
+.keycap-btn-sm:active, .keycap-btn-sm.is-active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--border-keycap);
+}
+
+.keycap-btn-lg {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 6px 0 var(--border-keycap);
+}
+.keycap-btn-lg:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 var(--border-keycap);
+}
+
+/* Mode pill groups */
+.mode-group {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  padding: 4px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  gap: 4px;
+}
+
+.mode-pill {
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--trans-fast);
+  cursor: pointer;
+}
+
+.mode-pill:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+.mode-pill.active {
+  background-color: var(--accent-coral);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(255, 107, 94, 0.35);
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+.card {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 28px;
+  transition: transform var(--trans-smooth), box-shadow var(--trans-smooth), border-color var(--trans-smooth);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background-color: var(--accent-yellow);
+  color: #1F1B2E;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  border: 2px solid #1F1B2E;
+  box-shadow: 2px 2px 0 #1F1B2E;
+}
+
+.sticker-badge-coral {
+  background-color: var(--accent-coral);
+  color: #FFFFFF;
+  border-color: #1F1B2E;
+}
+
+.sticker-badge-lavender {
+  background-color: var(--accent-lavender);
+  color: #1F1B2E;
+  border-color: #1F1B2E;
+}
+
+.sticker-badge-mint {
+  background-color: var(--accent-mint);
+  color: #FFFFFF;
+  border-color: #1F1B2E;
+}
+
+/* ==========================================================================
+   TYPING TEST DISPLAY & ANIMATED CARET
+   ========================================================================== */
+.typing-box-wrapper {
+  position: relative;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 32px 36px;
+  box-shadow: var(--shadow-md);
+  outline: none;
+  cursor: text;
+  min-height: 200px;
+  user-select: none;
+}
+
+.typing-box-wrapper:focus-within {
+  border-color: var(--accent-coral);
+  box-shadow: 0 0 0 4px var(--accent-coral-subtle), var(--shadow-lg);
+}
+
+.typing-text-display {
+  font-family: var(--font-mono);
+  font-size: 1.55rem;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  position: relative;
+  word-break: break-word;
+}
+
+.char-untyped {
+  color: var(--color-untyped);
+  opacity: 0.85;
+}
+
+.char-correct {
+  color: var(--color-correct);
+}
+
+.char-wrong {
+  color: var(--color-wrong);
+  background-color: var(--color-wrong-bg);
+  border-radius: 4px;
+}
+
+.char-wrong.char-space {
+  background-color: var(--color-wrong-bg);
+  position: relative;
+}
+.char-wrong.char-space::after {
+  content: "␣";
+  color: var(--color-wrong);
+  opacity: 0.8;
+}
+
+/* Animated Smooth Caret */
+.caret-cursor {
+  position: absolute;
+  width: 3px;
+  height: 2rem;
+  background-color: var(--accent-coral);
+  border-radius: 2px;
+  pointer-events: none;
+  transition: left 0.08s cubic-bezier(0.2, 0.8, 0.2, 1), top 0.12s ease-out;
+  animation: caret-pulse 1s infinite alternate;
+  z-index: 10;
+}
+
+@keyframes caret-pulse {
+  0% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.3; transform: scaleY(0.95); }
+}
+
+/* Ghost Racer Caret */
+.ghost-caret-cursor {
+  position: absolute;
+  width: 3px;
+  height: 2rem;
+  background-color: var(--accent-lavender);
+  border-radius: 2px;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: left 0.18s linear, top 0.18s ease-out;
+  z-index: 5;
+}
+
+.ghost-caret-cursor::after {
+  content: "👻 PB";
+  position: absolute;
+  top: -24px;
+  left: -14px;
+  font-size: 0.68rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  background: var(--accent-lavender);
+  color: #1F1B2E;
+  padding: 1px 6px;
+  border-radius: 6px;
+  border: 1px solid #1F1B2E;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   VIRTUAL KEYBOARD STYLES
+   ========================================================================== */
+.virtual-keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 18px;
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  margin-top: 24px;
+  user-select: none;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+}
+
+.vk-key {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 3px 0 var(--border-keycap);
+  transition: all 0.08s ease;
+}
+
+.vk-key-wide { min-width: 65px; }
+.vk-key-wider { min-width: 80px; }
+.vk-key-widest { min-width: 96px; }
+.vk-key-space { min-width: 260px; }
+
+.vk-key.is-active {
+  background-color: var(--accent-coral) !important;
+  color: #FFFFFF !important;
+  border-color: #E24C3E !important;
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #BD3427 !important;
+}
+
+.vk-key.is-wrong-flash {
+  background-color: var(--color-wrong) !important;
+  color: #FFFFFF !important;
+  animation: key-wrong-shake 0.25s ease;
+}
+
+@keyframes key-wrong-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px) translateY(2px); }
+  75% { transform: translateX(3px) translateY(2px); }
+}
+
+/* ==========================================================================
+   ANIMATIONS FOR ILLUSTRATION & UI
+   ========================================================================== */
+.keydash-illustration-svg .anim-glow {
+  animation: float-glow 6s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+.keydash-illustration-svg .anim-character {
+  animation: character-bob 3.5s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+.keydash-illustration-svg .keycap-1 {
+  animation: float-keycap-1 4s ease-in-out infinite alternate;
+}
+.keydash-illustration-svg .keycap-2 {
+  animation: float-keycap-2 4.5s ease-in-out infinite alternate 0.5s;
+}
+.keydash-illustration-svg .keycap-3 {
+  animation: float-keycap-3 5s ease-in-out infinite alternate 1s;
+}
+
+.keydash-illustration-svg .anim-stopwatch {
+  animation: float-stopwatch 4s ease-in-out infinite alternate 0.2s;
+  transform-origin: center;
+}
+
+.keydash-illustration-svg .anim-sparkle {
+  animation: sparkle-pulse 2.5s ease-in-out infinite alternate;
+}
+.keydash-illustration-svg .sparkle-2 { animation-delay: 0.8s; }
+.keydash-illustration-svg .sparkle-3 { animation-delay: 1.4s; }
+
+.keydash-illustration-svg .anim-screen-cursor {
+  animation: blink 0.9s infinite;
+}
+
+@keyframes character-bob {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-6px) rotate(0.4deg); }
+}
+
+@keyframes float-keycap-1 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(-6deg); }
+}
+@keyframes float-keycap-2 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-14px) rotate(8deg); }
+}
+@keyframes float-keycap-3 {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(-4deg); }
+}
+@keyframes float-stopwatch {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(5deg); }
+}
+@keyframes float-glow {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.05); opacity: 0.8; }
+}
+@keyframes sparkle-pulse {
+  0% { transform: scale(0.85); opacity: 0.4; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Error shake animation */
+.shake-animation {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+/* ==========================================================================
+   MODAL & OVERLAYS
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(31, 27, 46, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: modal-fade-in 0.25s ease-out;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: var(--bg-surface);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  max-width: 680px;
+  width: 100%;
+  padding: 36px;
+  position: relative;
+  animation: modal-scale-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes modal-scale-in {
+  from { transform: scale(0.9) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Pause Overlay */
+.pause-banner {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 27, 46, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  z-index: 50;
+  gap: 12px;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .typing-text-display {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  .typing-box-wrapper {
+    padding: 20px;
+  }
+  .virtual-keyboard {
+    display: none; /* Hide on mobile to allow native keyboard */
+  }
+}

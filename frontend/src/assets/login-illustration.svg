@@ -1,0 +1,163 @@
+<svg viewBox="0 0 500 500" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" class="keydash-illustration-svg">
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1F1B2E" flood-opacity="0.08" />
+    </filter>
+    <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#E8E2FF" />
+    </linearGradient>
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFECE8" />
+      <stop offset="100%" stop-color="#F2EBFF" />
+    </linearGradient>
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E7D9F8" />
+      <stop offset="100%" stop-color="#FFD6D0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background decorative backdrop blobs & aura -->
+  <g class="anim-glow">
+    <circle cx="250" cy="250" r="180" fill="#F4EDFD" opacity="0.6" />
+    <circle cx="210" cy="220" r="140" fill="#FFEFE9" opacity="0.7" />
+  </g>
+
+  <!-- Floating Sparkles & Stars -->
+  <g class="anim-sparkle sparkle-1">
+    <path d="M 120 130 Q 120 145 105 145 Q 120 145 120 160 Q 120 145 135 145 Q 120 145 120 130" fill="#FFB703" stroke="#1F1B2E" stroke-width="2" />
+  </g>
+  <g class="anim-sparkle sparkle-2">
+    <path d="M 390 100 Q 390 112 378 112 Q 390 112 390 124 Q 390 112 402 112 Q 390 112 390 100" fill="#FF6B5E" stroke="#1F1B2E" stroke-width="2" />
+  </g>
+  <g class="anim-sparkle sparkle-3">
+    <path d="M 370 290 Q 370 300 360 300 Q 370 300 370 310 Q 370 300 380 300 Q 370 300 370 290" fill="#C9A7F5" stroke="#1F1B2E" stroke-width="2" />
+  </g>
+  <g class="anim-sparkle sparkle-4">
+    <circle cx="90" cy="270" r="6" fill="#FF6B5E" stroke="#1F1B2E" stroke-width="2" />
+    <circle cx="410" cy="230" r="5" fill="#FFE27A" stroke="#1F1B2E" stroke-width="2" />
+    <circle cx="150" cy="90" r="4" fill="#C9A7F5" stroke="#1F1B2E" stroke-width="2" />
+  </g>
+
+  <!-- Floating 3D Keycaps -->
+  <!-- Keycap 1: "W" (top-left) -->
+  <g class="anim-keycap keycap-1">
+    <rect x="75" y="170" width="46" height="46" rx="10" fill="#FF6B5E" stroke="#1F1B2E" stroke-width="3" filter="url(#soft-shadow)" />
+    <rect x="78" y="173" width="40" height="38" rx="8" fill="#FF8277" />
+    <text x="98" y="198" font-family="'Fredoka', 'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">W</text>
+  </g>
+
+  <!-- Keycap 2: "P" (top-right) -->
+  <g class="anim-keycap keycap-2">
+    <rect x="365" y="145" width="48" height="48" rx="10" fill="#C9A7F5" stroke="#1F1B2E" stroke-width="3" filter="url(#soft-shadow)" />
+    <rect x="368" y="148" width="42" height="40" rx="8" fill="#D7BFF8" />
+    <text x="389" y="174" font-family="'Fredoka', 'Outfit', sans-serif" font-weight="bold" font-size="22" fill="#1F1B2E" text-anchor="middle" dominant-baseline="middle">P</text>
+  </g>
+
+  <!-- Keycap 3: "M" (bottom-right) -->
+  <g class="anim-keycap keycap-3">
+    <rect x="380" y="325" width="44" height="44" rx="10" fill="#FFE27A" stroke="#1F1B2E" stroke-width="3" filter="url(#soft-shadow)" />
+    <rect x="383" y="328" width="38" height="36" rx="8" fill="#FFF0A5" />
+    <text x="402" y="352" font-family="'Fredoka', 'Outfit', sans-serif" font-weight="bold" font-size="20" fill="#1F1B2E" text-anchor="middle" dominant-baseline="middle">M</text>
+  </g>
+
+  <!-- Floating Stopwatch (Top Left) -->
+  <g class="anim-stopwatch">
+    <rect x="156" y="95" width="16" height="10" rx="3" fill="#1F1B2E" />
+    <circle cx="164" cy="130" r="26" fill="#FFFFFF" stroke="#1F1B2E" stroke-width="3.5" filter="url(#soft-shadow)" />
+    <circle cx="164" cy="130" r="21" fill="#FFF8F0" />
+    <!-- ticks -->
+    <line x1="164" y1="112" x2="164" y2="116" stroke="#1F1B2E" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="164" y1="144" x2="164" y2="148" stroke="#1F1B2E" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="146" y1="130" x2="150" y2="130" stroke="#1F1B2E" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="178" y1="130" x2="182" y2="130" stroke="#1F1B2E" stroke-width="2.5" stroke-linecap="round" />
+    <!-- needle -->
+    <line x1="164" y1="130" x2="173" y2="121" stroke="#FF6B5E" stroke-width="3" stroke-linecap="round" />
+    <circle cx="164" cy="130" r="3.5" fill="#1F1B2E" />
+  </g>
+
+  <!-- Desk Base / Workspace Surface -->
+  <path d="M 60 410 C 140 400 360 400 440 410 L 450 435 C 350 445 150 445 50 435 Z" fill="url(#deskGrad)" stroke="#1F1B2E" stroke-width="3.5" />
+
+  <!-- Person Body & Chair Back -->
+  <g class="anim-character">
+    <!-- Ergonomic Chair Back -->
+    <rect x="175" y="240" width="150" height="150" rx="24" fill="#E2D4F8" stroke="#1F1B2E" stroke-width="3.5" />
+    <path d="M 235 390 L 235 440 M 265 390 L 265 440" stroke="#1F1B2E" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Torso / Hoodie (Coral #FF6B5E) -->
+    <path d="M 190 350 C 190 285 310 285 310 350 L 320 420 L 180 420 Z" fill="#FF6B5E" stroke="#1F1B2E" stroke-width="3.5" />
+    <!-- Hoodie Strings & Pocket -->
+    <path d="M 235 305 L 232 345 M 265 305 L 268 345" stroke="#FFF8F0" stroke-width="3" stroke-linecap="round" />
+    <path d="M 220 375 Q 250 385 280 375" fill="none" stroke="#1F1B2E" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Neck & Head -->
+    <rect x="236" y="225" width="28" height="30" rx="8" fill="#FFDFD0" stroke="#1F1B2E" stroke-width="3" />
+    
+    <!-- Hair Back -->
+    <path d="M 205 200 C 205 130 295 130 295 200 C 295 235 205 235 205 200 Z" fill="#1F1B2E" />
+    
+    <!-- Face -->
+    <circle cx="250" cy="190" r="38" fill="#FFE5D8" stroke="#1F1B2E" stroke-width="3.5" />
+
+    <!-- Cute Stylized Hair Front / Bangs -->
+    <path d="M 215 180 C 225 150 275 150 285 180 C 270 170 260 175 250 168 C 240 175 230 170 215 180 Z" fill="#1F1B2E" />
+
+    <!-- Glasses & Eyes -->
+    <!-- Left Glass -->
+    <rect x="228" y="180" width="18" height="15" rx="5" fill="#FFFFFF" fill-opacity="0.8" stroke="#1F1B2E" stroke-width="2.5" />
+    <!-- Right Glass -->
+    <rect x="254" y="180" width="18" height="15" rx="5" fill="#FFFFFF" fill-opacity="0.8" stroke="#1F1B2E" stroke-width="2.5" />
+    <!-- Bridge -->
+    <path d="M 246 186 L 254 186" stroke="#1F1B2E" stroke-width="2.5" />
+    <!-- Eyes -->
+    <circle cx="237" cy="187" r="2.5" fill="#1F1B2E" />
+    <circle cx="263" cy="187" r="2.5" fill="#1F1B2E" />
+
+    <!-- Cheeks Blush & Smile -->
+    <circle cx="225" cy="198" r="4.5" fill="#FF6B5E" opacity="0.6" />
+    <circle cx="275" cy="198" r="4.5" fill="#FF6B5E" opacity="0.6" />
+    <path d="M 244 204 Q 250 210 256 204" fill="none" stroke="#1F1B2E" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Arms Typing -->
+    <path d="M 195 320 Q 185 365 220 380 Q 235 375 245 370" fill="none" stroke="#FF6B5E" stroke-width="18" stroke-linecap="round" />
+    <path d="M 195 320 Q 185 365 220 380 Q 235 375 245 370" fill="none" stroke="#1F1B2E" stroke-width="3" stroke-linecap="round" />
+    
+    <path d="M 305 320 Q 315 365 280 380 Q 265 375 255 370" fill="none" stroke="#FF6B5E" stroke-width="18" stroke-linecap="round" />
+    <path d="M 305 320 Q 315 365 280 380 Q 265 375 255 370" fill="none" stroke="#1F1B2E" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Hands on Keyboard -->
+    <circle cx="242" cy="370" r="8" fill="#FFE5D8" stroke="#1F1B2E" stroke-width="2.5" />
+    <circle cx="258" cy="370" r="8" fill="#FFE5D8" stroke="#1F1B2E" stroke-width="2.5" />
+  </g>
+
+  <!-- Laptop & Glowing Display -->
+  <g class="anim-laptop">
+    <!-- Laptop Screen Open -->
+    <polygon points="190,320 310,320 325,245 175,245" fill="url(#laptopGrad)" stroke="#1F1B2E" stroke-width="3.5" />
+    <!-- Screen Inner Display -->
+    <polygon points="196,314 304,314 317,252 183,252" fill="url(#screenGlow)" stroke="#1F1B2E" stroke-width="2" />
+    
+    <!-- Code / Typing Lines on Screen -->
+    <line x1="200" y1="265" x2="250" y2="265" stroke="#FF6B5E" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="200" y1="277" x2="285" y2="277" stroke="#1F1B2E" stroke-width="3" stroke-linecap="round" />
+    <line x1="200" y1="289" x2="270" y2="289" stroke="#C9A7F5" stroke-width="3" stroke-linecap="round" />
+    <line x1="200" y1="301" x2="235" y2="301" stroke="#FFB703" stroke-width="3" stroke-linecap="round" />
+    <!-- Blinking screen cursor -->
+    <rect x="240" y="296" width="3" height="8" fill="#FF6B5E" class="anim-screen-cursor" />
+
+    <!-- Laptop Keyboard Base (Perspective) -->
+    <polygon points="160,370 340,370 310,320 190,320" fill="#FFFFFF" stroke="#1F1B2E" stroke-width="3.5" />
+    <!-- Keyboard Grid Area -->
+    <polygon points="180,362 320,362 298,326 202,326" fill="#E8E2FF" stroke="#1F1B2E" stroke-width="2" />
+    <!-- Trackpad -->
+    <rect x="235" y="364" width="30" height="4" rx="2" fill="#C9A7F5" stroke="#1F1B2E" stroke-width="1.5" />
+  </g>
+
+  <!-- Floating Speed Trail Particles -->
+  <g class="anim-speed-lines">
+    <line x1="140" y1="340" x2="160" y2="340" stroke="#FF6B5E" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3,3" />
+    <line x1="340" y1="340" x2="360" y2="340" stroke="#C9A7F5" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3,3" />
+    <line x1="330" y1="355" x2="355" y2="355" stroke="#FFE27A" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+</svg>
